@@ -1,0 +1,15 @@
+resources:
+#- deployment.yaml
+#- service.yaml
+- https://github.com/liangjsbfy/k8s-learn/tree/master/base?ref=master
+configMapGenerator:
+- name: ldap-configmap
+  files:
+    - env.startup.txt
+
+commonLabels:
+  app: foo
+  team: Beijing
+commonAnnotations:
+  application: foo
+  owners: Xiaoming,Damao  
